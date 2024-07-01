@@ -13,3 +13,4 @@ pyvis
 dill
 astunparse
 ml-dtypes # mod_name=ml_dtypes
+security==1.3.0
