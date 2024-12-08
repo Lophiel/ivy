@@ -1,6 +1,6 @@
 import os
-import random
 import ast
+import secrets
 
 BACKENDS = ["numpy", "jax", "tensorflow", "torch", "paddle"]
 
@@ -38,7 +38,7 @@ def extract_tests_from_dir(directory):
 def get_all_tests():
     test_names_without_backend = extract_tests_from_dir("ivy_tests/test_ivy")
     test_names_without_backend = sorted(set(test_names_without_backend))
-    random.Random(4).shuffle(test_names_without_backend)
+    secrets.SystemRandom().Random(4).shuffle(test_names_without_backend)
 
     test_names = []
     for test_name in test_names_without_backend:
