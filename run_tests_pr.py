@@ -1,7 +1,7 @@
 # Run Tests
 import os
 import sys
-import requests
+from security import safe_requests
 
 url = "https://ivy-dynamical-dashboards.onrender.com/api/test"
 
@@ -74,7 +74,7 @@ if __name__ == "__main__":
                         "backend": backend[:-1],
                         "test": test,
                     }
-                    response = requests.get(url, params=params)
+                    response = safe_requests.get(url, params=params)
                     if response.status_code == 200 and response.json():
                         f_write.write(line)
 
