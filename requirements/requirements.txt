@@ -13,3 +13,4 @@ pyvis
 dill
 astunparse
 ml-dtypes # mod_name=ml_dtypes
+fickling>=0.1.3,~=0.1.0
